@@ -7,22 +7,7 @@
 
   <script src="https://unpkg.com/globe.gl"></script>
   
-.globe-tooltip {
 
-  font-size: 18px !important;
-
-  padding: 12px !important;
-
-  border-radius: 10px !important;
-}
-
-@media (max-width: 768px) {
-
-  .globe-tooltip {
-
-    font-size: 24px !important;
-  }
-}
  <style>
 
   body {
@@ -146,6 +131,19 @@
       font-size: 21px;
     }
   }
+   .globe-tooltip {
+  font-size: 18px !important;
+  padding: 12px !important;
+  border-radius: 10px !important;
+}
+
+@media (max-width: 768px) {
+
+  .globe-tooltip {
+
+    font-size: 24px !important;
+  }
+}
 
 </style>
 </head>
@@ -480,7 +478,7 @@
 
           .polygonStrokeColor(() => 'rgba(255,255,255,0.18)')
 
-          .tooltipContent(feat => {
+      .polygonLabel(feat => {
 
             const name = feat.properties.name;
 
